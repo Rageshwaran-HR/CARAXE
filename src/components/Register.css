@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.register-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+/* Floating price tag */
+.price-tag {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  background: radial-gradient(circle at center, #ff9500 30%, #ff007f 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(255, 149, 0, 0.4);
+  transform: rotate(-5deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.price-tag:hover {
+  transform: rotate(0deg) scale(1.1);
+  box-shadow: 0 5px 20px rgba(255, 149, 0, 0.7);
+}
+
+/* Parallax Animated Floating Background */
+.register-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(255, 0, 128, 0.5), rgba(255, 165, 0, 0.5));
+  filter: blur(80px);
+  top: 20%;
+  left: 10%;
+  animation: float 10s infinite linear alternate;
+}
+
+.register-container::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, rgba(0, 255, 128, 0.5), rgba(0, 165, 255, 0.5));
+  filter: blur(90px);
+  bottom: 15%;
+  right: 10%;
+  animation: float 12s infinite linear alternate-reverse;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(30px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-card {
+    max-width: 350px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .price-tag {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .register-container::before,
+  .register-container::after {
+    width: 250px;
+    height: 250px;
+    filter: blur(70px);
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    padding: 1rem;
+  }
+
+  .register-card {
+    max-width: 320px;
+    padding: 1.8rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .price-tag {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .register-container::before,
+  .register-container::after {
+    width: 200px;
+    height: 200px;
+    filter: blur(60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .price-tag {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .register-container::before,
+  .register-container::after {
+    width: 150px;
+    height: 150px;
+    filter: blur(50px);
+  }
+}
+
