@@ -1562,7 +1562,7 @@ u,
 .countdown-container {
   display: flex;
   position: fixed;
-  bottom: 3%;  /* Distance from bottom of the screen */
+  bottom: 10%;  /* Distance from bottom of the screen */
   left: 50%;
   transform: translateX(-50%);
   justify-content: center;
@@ -1605,7 +1605,8 @@ u,
 @media (max-width: 768px) {
   .countdown-container {
     flex-direction: column;  /* Stack countdown items vertically */
-    gap: 10px;  /* Reduced gap between items */
+    gap: 10px;
+    bottom:3%;  /* Reduced gap between items */
   }
 
   .count-item {
@@ -2370,3 +2371,44 @@ u,
 
 
 
+.college-name-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.college-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+  animation: bounceInUp 3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .college-name {
+      font-size: 1.6rem;
+      padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .college-name {
+      font-size: 1.4rem;
+      padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-name {
+      font-size: 1.2rem;
+      padding: 0.5rem 0.8rem;
+      letter-spacing: 1px;
+  }
+}

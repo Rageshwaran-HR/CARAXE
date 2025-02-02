@@ -239,6 +239,10 @@ const Header = () => {
 			</div>
 
 		</div>
+		<div class="college-name-container animated duration-3s bounceInUp">
+    <h2 class="college-name">VELAMMAL ENGINEERING COLLEGE</h2>
+</div>
+
 		<div class="loading animated duration-5s">Gearing up for the Future...</div>
 		<a class="github-fork-ribbon left-bottom" href="https://github.com/englishextra/englishextra.github.io" target="_blank" rel="noopener noreferrer" title="Fork me on GitHub" data-ribbon="Register now !">Register Now</a>
 
