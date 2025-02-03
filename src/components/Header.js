@@ -148,6 +148,8 @@ const Header = () => {
 "https://englishextra.github.io/libs/john-locke/img/start-360x360.svg"
 ]));
 		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	</head>
 	<body>
 		<!-- images are hidden with display none in html and revealed with display block in css -->

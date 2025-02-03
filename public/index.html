@@ -27,7 +27,7 @@
                   document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
                   document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
               } else {
-                  document.querySelector(".countdown").innerText = "Event Started!";
+                document.querySelectorAll(".countdown").forEach(el => el.innerText = "Event Started!");
               }
           }
   
