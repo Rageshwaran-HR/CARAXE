@@ -6,35 +6,53 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
-      window.onload = function () {
+      document.addEventListener("DOMContentLoaded", function () {
           console.log("Countdown script loaded and running...");
-  
+    
           function updateCountdown() {
               const targetDate = new Date("February 24, 2025 00:00:00").getTime();
-              const now = new Date().getTime();
+              const now = Date.now();
               const timeLeft = targetDate - now;
-  
+    
               console.log("Time left:", timeLeft); // Debugging
-  
+    
               if (timeLeft > 0) {
                   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                   const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-  
-                  document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                  document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                  document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                  document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+    
+                  const daysElement = document.getElementById("days");
+                  const hoursElement = document.getElementById("hours");
+                  const minutesElement = document.getElementById("minutes");
+                  const secondsElement = document.getElementById("seconds");
+    
+                  if (daysElement && hoursElement && minutesElement && secondsElement) {
+                      daysElement.innerText = days.toString().padStart(2, '0');
+                      hoursElement.innerText = hours.toString().padStart(2, '0');
+                      minutesElement.innerText = minutes.toString().padStart(2, '0');
+                      secondsElement.innerText = seconds.toString().padStart(2, '0');
+                  }
               } else {
-                document.querySelectorAll(".countdown").forEach(el => el.innerText = "Event Started!");
+                  const countdownElements = document.querySelectorAll(".countdown");
+                  if (countdownElements.length > 0) {
+                      countdownElements.forEach(el => {
+                          el.innerText = "Event Started!";
+                      });
+                  }
               }
           }
+    
+          function runCountdown() {
+              updateCountdown();
+              requestAnimationFrame(runCountdown);
+          }
+    
+          runCountdown(); // Start updating countdown
+      });
+    </script>
+    
   
-          updateCountdown(); // Initial call
-          setInterval(updateCountdown, 1000); // Update every second
-      };
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
