@@ -56,21 +56,25 @@ const Register = () => {
 
         <p className="description">Elevate your skills at an exclusive event.</p>
 
-        <motion.div
-          className="price-tag"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          ₹150 /- ONLY
-          <br />
-          <br />
-          REGISTER NOW
-        </motion.div>
+        <a href="https://forms.gle/VSZrSWneZ38nwHDe9" target="_blank" rel="noopener noreferrer">
+          <motion.div
+            className="price-tag cursor-pointer"
+            animate={{ y: [0, -5, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          >
+            ₹150 /- ONLY
+            <br />
+            <br />
+            REGISTER NOW
+          </motion.div>
+        </a>
+
+
 
         {/* Contact Details */}
         <div className="contact-details">
-          <p><strong>Phone:</strong> +91 98765 43210</p>
-          <p><strong>Email:</strong> event@velammal.ac.in</p>
+          <p><strong>Phone:</strong> 9363635125 / 98435 15256</p>
+          <p><strong>Email:</strong>Caraxe2k25@gmail.com</p>
         </div>
       </motion.div>
     </div>

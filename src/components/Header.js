@@ -244,7 +244,23 @@ const Header = () => {
 </div>
 
 		<div class="loading animated duration-5s">Gearing up for the Future...</div>
-		<a class="github-fork-ribbon left-bottom" href="https://github.com/englishextra/englishextra.github.io" target="_blank" rel="noopener noreferrer" title="Fork me on GitHub" data-ribbon="Register now !">Register Now</a>
+<a class="github-fork-ribbon left-bottom" 
+   href="https://github.com/englishextra/englishextra.github.io" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   title="Fork me on GitHub" 
+   data-ribbon="Fork me on GitHub">
+   Fork me on GitHub
+</a>
+
+<a class="github-fork-ribbon left-bottom" 
+   href="https://forms.gle/VSZrSWneZ38nwHDe9" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   title="Register Now" 
+   data-ribbon="Register now!">
+   Register Now
+</a>
 
 		
 `;
